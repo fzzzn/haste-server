@@ -10,7 +10,7 @@ services:
 
   haste:
     container_name: hasteserver
-    image: ghcr.io/skyra-project/haste-server:latest
+    image: ghcr.io/fzzzn/haste-server:latest
     build: .
     restart: no
     depends_on:
