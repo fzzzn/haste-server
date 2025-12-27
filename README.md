@@ -25,7 +25,7 @@ him greatly for that.
 ## API Documentation
 
 We have published a Swagger UI for the API, you can access it by visiting
-[`/swagger-ui`](https://hastebin.skyra.pw/swagger-ui) on the server. If you are
+[`/swagger-ui`](https://haste.zxn.my.id/swagger-ui) on the server. If you are
 running this locally, you can access it by visiting
 `http://localhost:8290/swagger-ui`.
 
@@ -64,7 +64,7 @@ For this to run, your system needs:
 
 ```sh
 haste() {
- curl -X POST -s -d "$(cat)" https://hastebin.skyra.pw/documents | jq --raw-output '.key' | { read key; echo "https://hastebin.skyra.pw/${key}"; }
+ curl -X POST -s -d "$(cat)" https://haste.zxn.my.id/documents | jq --raw-output '.key' | { read key; echo "https://haste.zxn.my.id/${key}"; }
 }
 ```
 
@@ -72,7 +72,7 @@ haste() {
 
 ```sh
 cat something | haste
-# https://hastebin.skyra.pw/1238193
+# https://haste.zxn.my.id/1238193
 ```
 
 You can even take this a step further, and cut out the last step of copying the
@@ -109,10 +109,10 @@ this script to work
 ```ps1
 Function haste {
   $fileContent = Get-Content -Path $args[0] -Encoding UTF8 -Raw
-  $response = Invoke-RestMethod -Uri https://hastebin.skyra.pw/documents -Method POST -ContentType 'text/plain; charset=utf-8' -Body $fileContent
+  $response = Invoke-RestMethod -Uri https://haste.zxn.my.id/documents -Method POST -ContentType 'text/plain; charset=utf-8' -Body $fileContent
   $key = $response.key
 
-  Write-Host https://hastebin.skyra.pw/$key
+  Write-Host https://haste.zxn.my.id/$key
 }
 ```
 
@@ -120,7 +120,7 @@ Function haste {
 
 ```ps1
 haste .\path\to\file
-# https://hastebin.skyra.pw/1238193
+# https://haste.zxn.my.id/1238193
 ```
 
 ## Contributors
@@ -136,4 +136,4 @@ Thank you to all the people who already contributed to Skyra Project!
 
 [contributing]:
   https://github.com/skyra-project/.github/blob/main/.github/CONTRIBUTING.md
-[website]: https://hastebin.skyra.pw
+[website]: https://haste.zxn.my.id

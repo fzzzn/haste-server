@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
-Sitemap: https://hastebin.skyra.pw/sitemap.xml
+Sitemap: https://haste.zxn.my.id/sitemap.xml
 User-agent: *
 Disallow:
